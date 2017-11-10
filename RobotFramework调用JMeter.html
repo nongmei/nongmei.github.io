@@ -76,7 +76,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Python," />
+  <meta name="keywords" content="RobotFramework," />
 
 
 
@@ -92,18 +92,18 @@
 
 
 
-<meta name="description" content="Part 1偶然看到一道Python面试题(链接)：请写出下面的代码的输出是什么？1234567891011def extendList(val, list=[]):    list.append(val)    return listlist1 = extendList(10)list2 = extendList(123, [])list3 = extendList(&amp;apos;a&amp;apos;)">
-<meta name="keywords" content="Python">
+<meta name="description" content="问题最近有一个需求，想把性能测试也加到我们的CI流程中去。我们之前的性能测试是基于JMeter去做的，而自动化框架是基于RobotFramework，于是开始调研RF调用JMeter相关的技术。 解决可以通过Robot-Framework-JMeter-Library这个库解决。 安装1pip install robotframework-jmeterlibrary 依赖JavaJMeter 2.">
+<meta name="keywords" content="RobotFramework">
 <meta property="og:type" content="article">
-<meta property="og:title" content="python中的默认参数">
-<meta property="og:url" content="http://nongmei.coding.me/python中的默认参数.html">
+<meta property="og:title" content="RobotFramework调用JMeter">
+<meta property="og:url" content="http://nongmei.coding.me/RobotFramework调用JMeter.html">
 <meta property="og:site_name" content="Nongmei&#39;s Notes">
-<meta property="og:description" content="Part 1偶然看到一道Python面试题(链接)：请写出下面的代码的输出是什么？1234567891011def extendList(val, list=[]):    list.append(val)    return listlist1 = extendList(10)list2 = extendList(123, [])list3 = extendList(&amp;apos;a&amp;apos;)">
+<meta property="og:description" content="问题最近有一个需求，想把性能测试也加到我们的CI流程中去。我们之前的性能测试是基于JMeter去做的，而自动化框架是基于RobotFramework，于是开始调研RF调用JMeter相关的技术。 解决可以通过Robot-Framework-JMeter-Library这个库解决。 安装1pip install robotframework-jmeterlibrary 依赖JavaJMeter 2.">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-06-20T07:30:39.408Z">
+<meta property="og:updated_time" content="2017-11-10T08:13:11.317Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="python中的默认参数">
-<meta name="twitter:description" content="Part 1偶然看到一道Python面试题(链接)：请写出下面的代码的输出是什么？1234567891011def extendList(val, list=[]):    list.append(val)    return listlist1 = extendList(10)list2 = extendList(123, [])list3 = extendList(&amp;apos;a&amp;apos;)">
+<meta name="twitter:title" content="RobotFramework调用JMeter">
+<meta name="twitter:description" content="问题最近有一个需求，想把性能测试也加到我们的CI流程中去。我们之前的性能测试是基于JMeter去做的，而自动化框架是基于RobotFramework，于是开始调研RF调用JMeter相关的技术。 解决可以通过Robot-Framework-JMeter-Library这个库解决。 安装1pip install robotframework-jmeterlibrary 依赖JavaJMeter 2.">
 
 
 
@@ -131,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="http://nongmei.coding.me/python中的默认参数.html"/>
+  <link rel="canonical" href="http://nongmei.coding.me/RobotFramework调用JMeter.html"/>
 
 
 
 
 
-  <title>python中的默认参数 | Nongmei's Notes</title>
+  <title>RobotFramework调用JMeter | Nongmei's Notes</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -315,7 +315,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://nongmei.coding.me/python中的默认参数.html">
+    <link itemprop="mainEntityOfPage" href="http://nongmei.coding.me/RobotFramework调用JMeter.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="浓眉小眼">
@@ -332,7 +332,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">python中的默认参数</h1>
+          <h1 class="post-title" itemprop="name headline">RobotFramework调用JMeter</h1>
         
 
         <div class="post-meta">
@@ -344,8 +344,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-20T15:11:40+08:00">
-                2017-06-20
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-10T11:10:31+08:00">
+                2017-11-10
               </time>
             
 
@@ -362,7 +362,7 @@
 
           
           
-             <span id="/python中的默认参数.html" class="leancloud_visitors" data-flag-title="python中的默认参数">
+             <span id="/RobotFramework调用JMeter.html" class="leancloud_visitors" data-flag-title="RobotFramework调用JMeter">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -390,15 +390,24 @@
       
 
       
-        <h1 id="Part-1"><a href="#Part-1" class="headerlink" title="Part 1"></a>Part 1</h1><p>偶然看到一道Python面试题(<a href="http://blog.csdn.net/u011860731/article/details/46955307" target="_blank" rel="external">链接</a>)：<br>请写出下面的代码的输出是什么？<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">def extendList(val, list=[]):</div><div class="line">    list.append(val)</div><div class="line">    return list</div><div class="line"></div><div class="line">list1 = extendList(10)</div><div class="line">list2 = extendList(123, [])</div><div class="line">list3 = extendList(&apos;a&apos;)</div><div class="line"></div><div class="line">print &quot;list1 = %s&quot; % list1</div><div class="line">print &quot;list2 = %s&quot; % list2</div><div class="line">print &quot;list3 = %s&quot; % list3</div></pre></td></tr></table></figure></p>
-<p>实际输出结果为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">list1 = [10, &apos;a&apos;]</div><div class="line">list2 = [123]</div><div class="line">list3 = [10, &apos;a&apos;]</div></pre></td></tr></table></figure></p>
-<p>很多人会错误地预计list1等于［10］，list3等于[‘a’]，认为extendList函数的list参数在每一次函数被调用时都会被设置为默认值[]<br>但是，真实的情况是，默认的list只在函数定义的时候被创建一次。之后不指定list参数地调用extendList函数时，使用的都是同一个list。这是因为带默认参数的表达式是在函数定义的时候被计算的，而不是在函数调用时。<br>简单的说：<strong>一个函数参数的默认值，仅仅在该函数定义的时候，被赋值一次。</strong></p>
-<h2 id="Part-2"><a href="#Part-2" class="headerlink" title="Part 2"></a>Part 2</h2><p>可是我记得参数是整形的时候不是这样的啊，试一下看看<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">def addNumber(val, num=5):</div><div class="line">    num += val</div><div class="line">    return num</div><div class="line"></div><div class="line">num1 = addNumber(10)</div><div class="line">num2 = addNumber(123, 0)</div><div class="line">num3 = addNumber(9)</div><div class="line"></div><div class="line">print &quot;num1 = %s&quot; % num1</div><div class="line">print &quot;num2 = %s&quot; % num2</div><div class="line">print &quot;num3 = %s&quot; % num3</div></pre></td></tr></table></figure></p>
-<p>执行结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">num1 = 15</div><div class="line">num2 = 123</div><div class="line">num3 = 14</div></pre></td></tr></table></figure></p>
-<p>果然，这一次，每次调用的时候，num的初始值都是5。这又是什么原因呢？<br>解释：这就牵扯出了Python中的又一对概念———<strong>可变对象与不可变对象。列表是可变对象，对于列表的修改，是直接在原值上进行的。而整型是不可变对象，当Python中不可变对象的值发生变化时，只是改变了该对象的引用。</strong>譬如这里执行 num += val 时，其实并没有改变num变量原来对一个的那块内存的值，只是又开辟了一块内存，赋值为num+val，然后将num指向了这块地址。<br>我们可以用id()方法，输出变量的内存地址，就比较直观了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">def extendList(val, list=[]):</div><div class="line">    print id(list)</div><div class="line">    list.append(val)</div><div class="line">    print id(list)</div><div class="line">    return list</div><div class="line"></div><div class="line">list1 = extendList(10)</div><div class="line">list2 = extendList(123, [])</div><div class="line">list3 = extendList(&apos;a&apos;)</div><div class="line"></div><div class="line">print &quot;list1 = %s&quot; % list1</div><div class="line">print &quot;list2 = %s&quot; % list2</div><div class="line">print &quot;list3 = %s&quot; % list3</div><div class="line"></div><div class="line"></div><div class="line">def addNumber(val, num=5):</div><div class="line">    print id(num)</div><div class="line">    num += val</div><div class="line">    print id(num)</div><div class="line">    return num</div><div class="line"></div><div class="line">print &quot;###########&quot;</div><div class="line">num1 = addNumber(10)</div><div class="line">num2 = addNumber(123, 0)</div><div class="line">num3 = addNumber(9)</div><div class="line"></div><div class="line">print &quot;num1 = %s&quot; % num1</div><div class="line">print &quot;num2 = %s&quot; % num2</div><div class="line">print &quot;num3 = %s&quot; % num3</div></pre></td></tr></table></figure></p>
-<p>输出结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">56516424</div><div class="line">56516424</div><div class="line">57247112</div><div class="line">57247112</div><div class="line">56516424</div><div class="line">56516424</div><div class="line">list1 = [10, &apos;a&apos;]</div><div class="line">list2 = [123]</div><div class="line">list3 = [10, &apos;a&apos;]</div><div class="line">###########</div><div class="line">51471688</div><div class="line">51471448</div><div class="line">51471808</div><div class="line">51474832</div><div class="line">51471688</div><div class="line">51471472</div><div class="line">num1 = 15</div><div class="line">num2 = 123</div><div class="line">num3 = 14</div></pre></td></tr></table></figure></p>
-<p>可以看到，<br>第一次和第三次调用addNumber()时，num的默认地址是相同的，但赋值操作之后，地址发生了变化。但对于extendList()，是在list的原始地址上直接修改的。</p>
-
+        <h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>最近有一个需求，想把性能测试也加到我们的CI流程中去。<br>我们之前的性能测试是基于JMeter去做的，而自动化框架是基于RobotFramework，于是开始调研RF调用JMeter相关的技术。</p>
+<h1 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h1><p>可以通过<a href="https://github.com/kowalpy/Robot-Framework-JMeter-Library" target="_blank" rel="external">Robot-Framework-JMeter-Library</a>这个库解决。</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip install robotframework-jmeterlibrary</div></pre></td></tr></table></figure>
+<h2 id="依赖"><a href="#依赖" class="headerlink" title="依赖"></a>依赖</h2><p>Java<br>JMeter 2.12<br>python-2.7.5</p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>执行JMeter任务<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">| $&#123;logPath&#125;=         | set variable                         | D:/Tests/output1.jtl          |            |</div><div class="line">   | run jmeter          | D:/apache-jmeter-2.12/bin/jmeter.bat | D:/Tests/Test1Thread1Loop.jmx | $&#123;logPath&#125; |</div><div class="line">   | analyse jtl convert | $&#123;logPath&#125;                           |                               |            |</div></pre></td></tr></table></figure></p>
+<p>解析测试结果<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">| $&#123;result&#125; | analyse jtl convert | $&#123;logPath&#125; |           |</div><div class="line">| log       | $&#123;result&#125;           |            |           |</div><div class="line">| : FOR     | $&#123;ELEMENT&#125;          | IN         | @&#123;result&#125; |</div><div class="line">|           | log dictionary      | $&#123;ELEMENT&#125; |</div></pre></td></tr></table></figure></p>
+<h2 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h2><p>在解析测试结果过程中报错，提示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">unicodedecodeerror &apos;ascii&apos; codec can&apos;t decode byte 0xc3 in position 1 ordinal not in range(128)</div></pre></td></tr></table></figure></p>
+<p>这个问题研究了好久都没搞定，改JMeter配置文件的默认编码、加BeanShell PostProcessor等等方法都试过，仍然不行。<br>后来突然想到，之前自己写RF的Library的时候好像也遇到过类似的问题，是由于Python默认的编码是ASCII，输出的时候会将原始数据转成ASCII，所以报错。于是尝试了下之前的方法，完美解决。<br>具体方法如下：<br>修改JMeterLIb.py文件</p>
+<pre><code># 文件开头增加
+import sys
+...
+class LogAnalysisInitiator(object):
+    def __init__(self, filePath,     createSqlReport=False, createHtmlReport=False,     disableReports=None):
+# line 291， 增加如下两行
+        reload(sys)
+        sys.setdefaultencoding(&apos;utf-8&apos;)
+...
+</code></pre>
       
     </div>
 
@@ -448,7 +457,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Python/" rel="tag"># Python</a>
+            <a href="/tags/RobotFramework/" rel="tag"># RobotFramework</a>
           
         </div>
       
@@ -461,8 +470,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/如果提高自己博客的搜索排名.html" rel="next" title="如果提高自己博客的搜索排名">
-                <i class="fa fa-chevron-left"></i> 如果提高自己博客的搜索排名
+              <a href="/linux下修改sudo的环境变量.html" rel="next" title="linux下修改sudo的环境变量">
+                <i class="fa fa-chevron-left"></i> linux下修改sudo的环境变量
               </a>
             
           </div>
@@ -471,8 +480,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/HTTP接口测试用例设计.html" rel="prev" title="HTTP接口测试用例设计">
-                HTTP接口测试用例设计 <i class="fa fa-chevron-right"></i>
+              <a href="/查询Redis数据报错.html" rel="prev" title="查询Redis数据报错">
+                查询Redis数据报错 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -593,7 +602,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Part-1"><span class="nav-number">1.</span> <span class="nav-text">Part 1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Part-2"><span class="nav-number">1.1.</span> <span class="nav-text">Part 2</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#问题"><span class="nav-number">1.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解决"><span class="nav-number">2.</span> <span class="nav-text">解决</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">2.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#依赖"><span class="nav-number">2.2.</span> <span class="nav-text">依赖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用"><span class="nav-number">2.3.</span> <span class="nav-text">使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#遇到的问题"><span class="nav-number">2.4.</span> <span class="nav-text">遇到的问题</span></a></li></ol></li></ol></div>
             
 
           </div>

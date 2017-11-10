@@ -76,7 +76,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Python," />
+  <meta name="keywords" content="redis," />
 
 
 
@@ -92,18 +92,18 @@
 
 
 
-<meta name="description" content="Part 1偶然看到一道Python面试题(链接)：请写出下面的代码的输出是什么？1234567891011def extendList(val, list=[]):    list.append(val)    return listlist1 = extendList(10)list2 = extendList(123, [])list3 = extendList(&amp;apos;a&amp;apos;)">
-<meta name="keywords" content="Python">
+<meta name="description" content="问题访问Redis变量是，出现以下错误：1WRONGTYPE Operation against a key holding the wrong kind of value 解决搜索后发现该问题可能由多种原因导致，比如有同名的变量设置的不用的数据类型等等。后来简单了解了一下，Redis中的数据类型包含以下几种：string（字符串），hash（哈希），list（列表），set（集合）及zset(s">
+<meta name="keywords" content="redis">
 <meta property="og:type" content="article">
-<meta property="og:title" content="python中的默认参数">
-<meta property="og:url" content="http://nongmei.coding.me/python中的默认参数.html">
+<meta property="og:title" content="查询Redis数据报错">
+<meta property="og:url" content="http://nongmei.coding.me/查询Redis数据报错.html">
 <meta property="og:site_name" content="Nongmei&#39;s Notes">
-<meta property="og:description" content="Part 1偶然看到一道Python面试题(链接)：请写出下面的代码的输出是什么？1234567891011def extendList(val, list=[]):    list.append(val)    return listlist1 = extendList(10)list2 = extendList(123, [])list3 = extendList(&amp;apos;a&amp;apos;)">
+<meta property="og:description" content="问题访问Redis变量是，出现以下错误：1WRONGTYPE Operation against a key holding the wrong kind of value 解决搜索后发现该问题可能由多种原因导致，比如有同名的变量设置的不用的数据类型等等。后来简单了解了一下，Redis中的数据类型包含以下几种：string（字符串），hash（哈希），list（列表），set（集合）及zset(s">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-06-20T07:30:39.408Z">
+<meta property="og:updated_time" content="2017-11-10T06:22:48.452Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="python中的默认参数">
-<meta name="twitter:description" content="Part 1偶然看到一道Python面试题(链接)：请写出下面的代码的输出是什么？1234567891011def extendList(val, list=[]):    list.append(val)    return listlist1 = extendList(10)list2 = extendList(123, [])list3 = extendList(&amp;apos;a&amp;apos;)">
+<meta name="twitter:title" content="查询Redis数据报错">
+<meta name="twitter:description" content="问题访问Redis变量是，出现以下错误：1WRONGTYPE Operation against a key holding the wrong kind of value 解决搜索后发现该问题可能由多种原因导致，比如有同名的变量设置的不用的数据类型等等。后来简单了解了一下，Redis中的数据类型包含以下几种：string（字符串），hash（哈希），list（列表），set（集合）及zset(s">
 
 
 
@@ -131,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="http://nongmei.coding.me/python中的默认参数.html"/>
+  <link rel="canonical" href="http://nongmei.coding.me/查询Redis数据报错.html"/>
 
 
 
 
 
-  <title>python中的默认参数 | Nongmei's Notes</title>
+  <title>查询Redis数据报错 | Nongmei's Notes</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -315,7 +315,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://nongmei.coding.me/python中的默认参数.html">
+    <link itemprop="mainEntityOfPage" href="http://nongmei.coding.me/查询Redis数据报错.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="浓眉小眼">
@@ -332,7 +332,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">python中的默认参数</h1>
+          <h1 class="post-title" itemprop="name headline">查询Redis数据报错</h1>
         
 
         <div class="post-meta">
@@ -344,8 +344,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-20T15:11:40+08:00">
-                2017-06-20
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-10T14:16:01+08:00">
+                2017-11-10
               </time>
             
 
@@ -362,7 +362,7 @@
 
           
           
-             <span id="/python中的默认参数.html" class="leancloud_visitors" data-flag-title="python中的默认参数">
+             <span id="/查询Redis数据报错.html" class="leancloud_visitors" data-flag-title="查询Redis数据报错">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -390,14 +390,8 @@
       
 
       
-        <h1 id="Part-1"><a href="#Part-1" class="headerlink" title="Part 1"></a>Part 1</h1><p>偶然看到一道Python面试题(<a href="http://blog.csdn.net/u011860731/article/details/46955307" target="_blank" rel="external">链接</a>)：<br>请写出下面的代码的输出是什么？<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">def extendList(val, list=[]):</div><div class="line">    list.append(val)</div><div class="line">    return list</div><div class="line"></div><div class="line">list1 = extendList(10)</div><div class="line">list2 = extendList(123, [])</div><div class="line">list3 = extendList(&apos;a&apos;)</div><div class="line"></div><div class="line">print &quot;list1 = %s&quot; % list1</div><div class="line">print &quot;list2 = %s&quot; % list2</div><div class="line">print &quot;list3 = %s&quot; % list3</div></pre></td></tr></table></figure></p>
-<p>实际输出结果为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">list1 = [10, &apos;a&apos;]</div><div class="line">list2 = [123]</div><div class="line">list3 = [10, &apos;a&apos;]</div></pre></td></tr></table></figure></p>
-<p>很多人会错误地预计list1等于［10］，list3等于[‘a’]，认为extendList函数的list参数在每一次函数被调用时都会被设置为默认值[]<br>但是，真实的情况是，默认的list只在函数定义的时候被创建一次。之后不指定list参数地调用extendList函数时，使用的都是同一个list。这是因为带默认参数的表达式是在函数定义的时候被计算的，而不是在函数调用时。<br>简单的说：<strong>一个函数参数的默认值，仅仅在该函数定义的时候，被赋值一次。</strong></p>
-<h2 id="Part-2"><a href="#Part-2" class="headerlink" title="Part 2"></a>Part 2</h2><p>可是我记得参数是整形的时候不是这样的啊，试一下看看<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">def addNumber(val, num=5):</div><div class="line">    num += val</div><div class="line">    return num</div><div class="line"></div><div class="line">num1 = addNumber(10)</div><div class="line">num2 = addNumber(123, 0)</div><div class="line">num3 = addNumber(9)</div><div class="line"></div><div class="line">print &quot;num1 = %s&quot; % num1</div><div class="line">print &quot;num2 = %s&quot; % num2</div><div class="line">print &quot;num3 = %s&quot; % num3</div></pre></td></tr></table></figure></p>
-<p>执行结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">num1 = 15</div><div class="line">num2 = 123</div><div class="line">num3 = 14</div></pre></td></tr></table></figure></p>
-<p>果然，这一次，每次调用的时候，num的初始值都是5。这又是什么原因呢？<br>解释：这就牵扯出了Python中的又一对概念———<strong>可变对象与不可变对象。列表是可变对象，对于列表的修改，是直接在原值上进行的。而整型是不可变对象，当Python中不可变对象的值发生变化时，只是改变了该对象的引用。</strong>譬如这里执行 num += val 时，其实并没有改变num变量原来对一个的那块内存的值，只是又开辟了一块内存，赋值为num+val，然后将num指向了这块地址。<br>我们可以用id()方法，输出变量的内存地址，就比较直观了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">def extendList(val, list=[]):</div><div class="line">    print id(list)</div><div class="line">    list.append(val)</div><div class="line">    print id(list)</div><div class="line">    return list</div><div class="line"></div><div class="line">list1 = extendList(10)</div><div class="line">list2 = extendList(123, [])</div><div class="line">list3 = extendList(&apos;a&apos;)</div><div class="line"></div><div class="line">print &quot;list1 = %s&quot; % list1</div><div class="line">print &quot;list2 = %s&quot; % list2</div><div class="line">print &quot;list3 = %s&quot; % list3</div><div class="line"></div><div class="line"></div><div class="line">def addNumber(val, num=5):</div><div class="line">    print id(num)</div><div class="line">    num += val</div><div class="line">    print id(num)</div><div class="line">    return num</div><div class="line"></div><div class="line">print &quot;###########&quot;</div><div class="line">num1 = addNumber(10)</div><div class="line">num2 = addNumber(123, 0)</div><div class="line">num3 = addNumber(9)</div><div class="line"></div><div class="line">print &quot;num1 = %s&quot; % num1</div><div class="line">print &quot;num2 = %s&quot; % num2</div><div class="line">print &quot;num3 = %s&quot; % num3</div></pre></td></tr></table></figure></p>
-<p>输出结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">56516424</div><div class="line">56516424</div><div class="line">57247112</div><div class="line">57247112</div><div class="line">56516424</div><div class="line">56516424</div><div class="line">list1 = [10, &apos;a&apos;]</div><div class="line">list2 = [123]</div><div class="line">list3 = [10, &apos;a&apos;]</div><div class="line">###########</div><div class="line">51471688</div><div class="line">51471448</div><div class="line">51471808</div><div class="line">51474832</div><div class="line">51471688</div><div class="line">51471472</div><div class="line">num1 = 15</div><div class="line">num2 = 123</div><div class="line">num3 = 14</div></pre></td></tr></table></figure></p>
-<p>可以看到，<br>第一次和第三次调用addNumber()时，num的默认地址是相同的，但赋值操作之后，地址发生了变化。但对于extendList()，是在list的原始地址上直接修改的。</p>
+        <h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>访问Redis变量是，出现以下错误：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">WRONGTYPE Operation against a key holding the wrong kind of value</div></pre></td></tr></table></figure></p>
+<h1 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h1><p>搜索后发现该问题可能由多种原因导致，比如有同名的变量设置的不用的数据类型等等。<br>后来简单了解了一下，<strong>Redis中的数据类型包含以下几种：string（字符串），hash（哈希），list（列表），set（集合）及zset(sorted set：有序集合)。不同的数据类型，要使用不同的方法访问。</strong><br>我之前接触Redis比较少，基本就是通过GET方法访问一下字符串变量。而这次需要访问的list类型数据，使用LINDEX方法后正常。<br>可参考菜鸟教程上的<a href="http://www.runoob.com/redis/redis-data-types.html" target="_blank" rel="external">Redis教程</a>。</p>
 
       
     </div>
@@ -448,7 +442,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Python/" rel="tag"># Python</a>
+            <a href="/tags/redis/" rel="tag"># redis</a>
           
         </div>
       
@@ -461,8 +455,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/如果提高自己博客的搜索排名.html" rel="next" title="如果提高自己博客的搜索排名">
-                <i class="fa fa-chevron-left"></i> 如果提高自己博客的搜索排名
+              <a href="/RobotFramework调用JMeter.html" rel="next" title="RobotFramework调用JMeter">
+                <i class="fa fa-chevron-left"></i> RobotFramework调用JMeter
               </a>
             
           </div>
@@ -470,10 +464,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/HTTP接口测试用例设计.html" rel="prev" title="HTTP接口测试用例设计">
-                HTTP接口测试用例设计 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -593,7 +583,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Part-1"><span class="nav-number">1.</span> <span class="nav-text">Part 1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Part-2"><span class="nav-number">1.1.</span> <span class="nav-text">Part 2</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#问题"><span class="nav-number">1.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解决"><span class="nav-number">2.</span> <span class="nav-text">解决</span></a></li></ol></div>
             
 
           </div>
