@@ -101,7 +101,7 @@
 <meta property="og:site_name" content="Nongmei&#39;s Notes">
 <meta property="og:description" content="序工作中会涉及一些使用图形验证码的场景，导致自动化测试无法进行，于是简单研究了一下验证码的识别技术。简单Google之后，发现了Tesseract-OCR：Tesseract是一个开源的OCR（Optical Character Recognition，光学字符识别）引擎，可以识别多种格式的图像文件并将其转换成文本，目前已支持60多种语言（包括中文）。 Tesseract最初由HP公司开发，后来由">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-18T10:33:30.748Z">
+<meta property="og:updated_time" content="2018-01-19T08:07:31.248Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python使用Tesseract-OCR识别验证码">
 <meta name="twitter:description" content="序工作中会涉及一些使用图形验证码的场景，导致自动化测试无法进行，于是简单研究了一下验证码的识别技术。简单Google之后，发现了Tesseract-OCR：Tesseract是一个开源的OCR（Optical Character Recognition，光学字符识别）引擎，可以识别多种格式的图像文件并将其转换成文本，目前已支持60多种语言（包括中文）。 Tesseract最初由HP公司开发，后来由">
@@ -406,16 +406,18 @@
 <ol>
 <li>安装tesseract-OCR<br>参考<a href="https://github.com/tesseract-ocr/tesseract/wiki" title="wiki" target="_blank" rel="external">官方wiki</a>,windows系统只有非官方的安装包</li>
 <li>pytesseract安装<br>pip install pytesseract</li>
-<li>安装PIL<br>Windows 64bits下PIL的安装，请参考<a href="https://nongmei.github.io/Windows10%2064%E4%BD%8D%E4%B8%8BPython%E5%AE%89%E8%A3%85PIL%E5%BA%93.html#more" title="PIL" target="_blank" rel="external">另一篇博客</a><h1 id="验证码识别代码"><a href="#验证码识别代码" class="headerlink" title="验证码识别代码"></a>验证码识别代码</h1></li>
+<li>安装PIL<br>Windows 64bits下PIL的安装，请参考<a href="https://nongmei.github.io/Windows10%2064%E4%BD%8D%E4%B8%8BPython%E5%AE%89%E8%A3%85PIL%E5%BA%93.html#more" title="PIL" target="_blank" rel="external">另一篇博客</a></li>
 </ol>
+<p>#验证码识别代码 #</p>
 <h2 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">import pytesseract</div><div class="line">from PIL import Image</div><div class="line"></div><div class="line">image = Image.open(&apos;code.png&apos;)</div><div class="line">code = pytesseract.image_to_string(image)</div><div class="line">print code</div></pre></td></tr></table></figure>
 <h2 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h2><p>上面是使用tesseract-OCR进行图像识别的基本方法，但在实际情况中，验证码里往往有一些干扰信息等，需要做一些特殊处理才能识别，否则错误率很高。<br>搜索的一下，大致的处理方法如下：</p>
 <ol>
 <li><p>灰度化及二值化</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">#转成灰度图</div><div class="line">    imgry = image.convert(&apos;L&apos;)</div><div class="line">    #二值化，阈值可以根据情况修改</div><div class="line">    threshold = 128</div><div class="line">    table = []</div><div class="line">    for i in range(256):</div><div class="line">        if i &lt; threshold:</div><div class="line">            table.append(0)</div><div class="line">        else:</div><div class="line">            table.append(1)</div><div class="line">    out = imgry.point(table, &apos;1&apos;)</div><div class="line">    return out</div></pre></td></tr></table></figure>
 </li>
-<li><p>降噪<br>对于去除噪音的技术，没有一个统一的算法，但是一个网站的验证码噪音，一定是有一定的规则的。只有分析出这个规则，就可以写相应的代码去除干扰。</p>
+<li><p>降噪<br>对于去除噪音的技术，没有一个统一的算法，但是一个网站的验证码噪音，一定是有一定的规则的。比如有的是一些孤立点、有的是一些直线等等。只有分析出这个规则，就可以写相应的代码去除干扰。<br>其他还看到一些Flood fill、腐蚀、膨胀等图像处理算法，这里没有做深入研究。</p>
 </li>
+<li></li>
 </ol>
 
       
@@ -612,7 +614,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#序"><span class="nav-number">1.</span> <span class="nav-text">序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装"><span class="nav-number">2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#验证码识别代码"><span class="nav-number">3.</span> <span class="nav-text">验证码识别代码</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本操作"><span class="nav-number">3.1.</span> <span class="nav-text">基本操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#优化"><span class="nav-number">3.2.</span> <span class="nav-text">优化</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#序"><span class="nav-number">1.</span> <span class="nav-text">序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装"><span class="nav-number">2.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本操作"><span class="nav-number">2.1.</span> <span class="nav-text">基本操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#优化"><span class="nav-number">2.2.</span> <span class="nav-text">优化</span></a></li></ol></li></ol></div>
             
 
           </div>
