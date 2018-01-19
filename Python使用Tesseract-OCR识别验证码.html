@@ -101,7 +101,7 @@
 <meta property="og:site_name" content="Nongmei&#39;s Notes">
 <meta property="og:description" content="序工作中会涉及一些使用图形验证码的场景，导致自动化测试无法进行，于是简单研究了一下验证码的识别技术。简单Google之后，发现了Tesseract-OCR：Tesseract是一个开源的OCR（Optical Character Recognition，光学字符识别）引擎，可以识别多种格式的图像文件并将其转换成文本，目前已支持60多种语言（包括中文）。 Tesseract最初由HP公司开发，后来由">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-19T08:07:31.248Z">
+<meta property="og:updated_time" content="2018-01-19T08:43:04.365Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python使用Tesseract-OCR识别验证码">
 <meta name="twitter:description" content="序工作中会涉及一些使用图形验证码的场景，导致自动化测试无法进行，于是简单研究了一下验证码的识别技术。简单Google之后，发现了Tesseract-OCR：Tesseract是一个开源的OCR（Optical Character Recognition，光学字符识别）引擎，可以识别多种格式的图像文件并将其转换成文本，目前已支持60多种语言（包括中文）。 Tesseract最初由HP公司开发，后来由">
@@ -417,8 +417,10 @@
 </li>
 <li><p>降噪<br>对于去除噪音的技术，没有一个统一的算法，但是一个网站的验证码噪音，一定是有一定的规则的。比如有的是一些孤立点、有的是一些直线等等。只有分析出这个规则，就可以写相应的代码去除干扰。<br>其他还看到一些Flood fill、腐蚀、膨胀等图像处理算法，这里没有做深入研究。</p>
 </li>
-<li></li>
 </ol>
+<h1 id="训练"><a href="#训练" class="headerlink" title="训练"></a>训练</h1><p>对于简单一点的验证码，经过上述步骤，应该已经可以正确识别了。但如果准确率还比较低的话，就需要通过对应的训练工具和训练样本，来提高识别率了。<br>Tesseract-OCR的训练过程大致如下：<br><strong>安装jTessBoxEditor -&gt; 获取样本文件 -&gt; Merge样本文件 –&gt; 生成BOX文件 -&gt; 定义字符配置文件 -&gt; 字符矫正 -&gt; 执行批处理文件 -&gt; 将生成的traineddata放入tessdata中
+</strong><br>经过训练之后，应该可以大大提高验证码的识别率。</p>
+<h1 id="原理分析"><a href="#原理分析" class="headerlink" title="原理分析"></a>原理分析</h1><p>出于好奇，简单了解了一下识别原理，详细内容可参考<a href="https://static.googleusercontent.com/media/research.google.com/zh-CN//pubs/archive/33418.pdf" title="engine" target="_blank" rel="external">这篇文章</a>。<br>识别过程大致可以分为两步：1.划分包含文字的区域；2.对文件进行识别。<br>其中每一步都有复杂的算法逻辑。第一步涉及预处理（倾斜校正 去噪等)、版面分析、字符切分等，第二部涉及特征提取、分类、后处理。</p>
 
       
     </div>
@@ -614,7 +616,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#序"><span class="nav-number">1.</span> <span class="nav-text">序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装"><span class="nav-number">2.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本操作"><span class="nav-number">2.1.</span> <span class="nav-text">基本操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#优化"><span class="nav-number">2.2.</span> <span class="nav-text">优化</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#序"><span class="nav-number">1.</span> <span class="nav-text">序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装"><span class="nav-number">2.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本操作"><span class="nav-number">2.1.</span> <span class="nav-text">基本操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#优化"><span class="nav-number">2.2.</span> <span class="nav-text">优化</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#训练"><span class="nav-number">3.</span> <span class="nav-text">训练</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#原理分析"><span class="nav-number">4.</span> <span class="nav-text">原理分析</span></a></li></ol></div>
             
 
           </div>
